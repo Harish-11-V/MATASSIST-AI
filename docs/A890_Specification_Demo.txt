@@ -1,0 +1,269 @@
+ASTM A890/A890M - Standard Specification for Castings, Iron-Chromium-Nickel-Molybdenum Corrosion-Resistant, Duplex (Austenitic/Ferritic) for General Application
+
+SCOPE
+This specification covers cast duplex stainless steel (austenitic/ferritic) alloys for general applications requiring corrosion resistance and enhanced mechanical properties.
+
+MATERIAL GRADES - CAST DUPLEX STAINLESS STEEL
+
+GRADE 1A (CD4MCu) - UNS J93370
+Composition: 25Cr-5Ni-Mo-Cu
+- Chromium: 24.5-26.5%
+- Nickel: 4.75-6.00%
+- Molybdenum: 1.75-2.25%
+- Copper: 2.75-3.25%
+- Carbon: 0.04% max
+- Nitrogen: 0.10-0.25%
+
+Mechanical Properties:
+- Tensile Strength: 690 MPa minimum (100 ksi)
+- Yield Strength: 485 MPa minimum (70 ksi)
+- Elongation: 16% minimum
+- Hardness: 290 HB typical
+
+Heat Treatment: 1900°F (1040°C) minimum, water quench or rapid cool
+
+Applications: Marine pump impellers, valve bodies for seawater, chemical processing, paper mill components, offshore oil platforms
+
+Structure: Duplex (30-60% Ferrite + Balance Austenite)
+
+---
+
+GRADE 1B (CD4MCuN) - UNS J93372
+Composition: 25Cr-5Ni-Mo-Cu-N
+- Chromium: 24.5-26.5%
+- Nickel: 4.7-6.0%
+- Molybdenum: 1.7-2.3%
+- Copper: 2.7-3.3%
+- Carbon: 0.04% max
+- Nitrogen: 0.22-0.33% (Enhanced nitrogen)
+
+Mechanical Properties:
+- Tensile Strength: 690 MPa minimum (100 ksi)
+- Yield Strength: 485 MPa minimum (70 ksi)
+- Elongation: 16% minimum
+- Hardness: 290 HB typical
+
+Heat Treatment: 1900°F (1040°C) minimum, water quench or rapid cool
+
+Applications: High-strength marine components, seawater handling, desalination plants, pump/valve bodies, chemical processing
+
+Structure: Duplex (30-60% Ferrite + Balance Austenite)
+
+---
+
+GRADE 1C (CD3MCuN) - UNS J93373
+Composition: 25Cr-6Ni-Mo-Cu-N
+- Chromium: 24.0-26.7%
+- Nickel: 5.6-6.7%
+- Molybdenum: 2.9-3.8% (High Mo)
+- Copper: 1.40-1.90%
+- Carbon: 0.030% max
+- Nitrogen: 0.10-0.30%
+
+Mechanical Properties:
+- Tensile Strength: 690 MPa minimum (100 ksi)
+- Yield Strength: 450 MPa minimum (65 ksi)
+- Elongation: 25% minimum
+- Hardness: 285 HB typical
+
+Heat Treatment: 1900°F (1040°C) minimum, water quench or rapid cool
+
+Applications: Highly corrosive chemical processing, severe marine corrosion, desalination, pulp/paper digesters, offshore platforms
+
+Structure: Duplex (30-60% Ferrite + Balance Austenite)
+
+---
+
+GRADE 2A (CE8MN) - UNS J93345
+Composition: 24Cr-10Ni-Mo-N
+- Chromium: 22.5-25.5%
+- Nickel: 8.0-11.0% (High nickel content)
+- Molybdenum: 3.0-4.5%
+- Carbon: 0.08% max
+
+Mechanical Properties:
+- Tensile Strength: 655 MPa minimum (95 ksi)
+- Yield Strength: 450 MPa minimum (65 ksi)
+- Elongation: 25% minimum
+- Hardness: 280 HB typical
+
+Heat Treatment: 2050°F (1120°C) minimum, water quench or rapid cool
+
+Applications: Chemical processing, pharmaceutical industry, food processing, marine applications, high chloride environments
+
+Structure: Duplex (30-60% Ferrite + Balance Austenite)
+
+---
+
+GRADE 3A (CD6MN) - UNS J93371
+Composition: 25Cr-5Ni-Mo-N
+- Chromium: 24.0-27.0%
+- Nickel: 4.0-6.0%
+- Molybdenum: 1.75-2.5%
+- Carbon: 0.06% max
+- Nitrogen: 0.15-0.25%
+
+Mechanical Properties:
+- Tensile Strength: 655 MPa minimum (95 ksi)
+- Yield Strength: 450 MPa minimum (65 ksi)
+- Elongation: 25% minimum
+- Hardness: 280 HB typical
+
+Heat Treatment: 1950°F (1070°C) minimum, water quench or rapid cool
+
+Applications: Marine pump components, valve bodies, chemical processing piping, seawater systems, offshore equipment
+
+Structure: Duplex (30-60% Ferrite + Balance Austenite)
+
+---
+
+GRADE 4A (CD3MN) - UNS J92205 (2205 Equivalent)
+Composition: 22Cr-5Ni-Mo-N
+- Chromium: 21.0-23.5%
+- Nickel: 4.5-6.5%
+- Molybdenum: 2.5-3.5%
+- Copper: 1.00% max
+- Carbon: 0.03% max
+- Nitrogen: 0.10-0.30%
+
+Mechanical Properties:
+- Tensile Strength: 620 MPa minimum (90 ksi)
+- Yield Strength: 415 MPa minimum (60 ksi)
+- Elongation: 25% minimum
+- Hardness: 290 HB max
+
+Heat Treatment: 2050°F (1120°C) minimum, water quench OR furnace cool to 1850°F (1010°C), hold 15 min, water quench
+
+Applications: Offshore oil and gas platforms, desalination plants, chemical tankers, heat exchangers, pulp/paper digesters, marine/subsea equipment
+
+Structure: Duplex (50% Ferrite + 50% Austenite) - Most balanced duplex grade
+
+Corrosion Resistance: Excellent resistance to chloride stress corrosion cracking (SCC) and pitting
+
+Special Notes: This is the cast equivalent of wrought 2205 duplex stainless steel, the most widely used duplex grade in the world.
+
+---
+
+GRADE 5A (CE3MN)
+Composition: 25Cr-7Ni-Mo-N
+- Chromium: 24.0-26.0%
+- Nickel: 6.0-8.0%
+- Molybdenum: 4.0-5.0% (Very high Mo)
+- Carbon: 0.03% max
+- Nitrogen: 0.10-0.30%
+
+Mechanical Properties:
+- Tensile Strength: 690 MPa minimum (100 ksi)
+- Yield Strength: 515 MPa minimum (75 ksi) - HIGHEST STRENGTH
+- Elongation: 18% minimum
+- Hardness: 300 HB typical
+
+Heat Treatment: 2050°F (1120°C) minimum, furnace cool to 1910°F (1045°C) minimum, then water quench
+
+Applications: Severe marine corrosion, chemical processing with chlorides, high chloride desalination, offshore deepwater equipment, high-strength corrosive applications
+
+Structure: Duplex (30-60% Ferrite + Balance Austenite)
+
+Special Notes: Highest mechanical strength of all A890 grades, exceptional corrosion resistance due to high Mo content.
+
+---
+
+GRADE 6A (CD3MWCuN) - SUPER DUPLEX
+Composition: 25Cr-7Ni-Mo-W-Cu-N
+- Chromium: 24.0-26.0%
+- Nickel: 6.5-8.5%
+- Molybdenum: 3.0-4.0%
+- Tungsten: 0.5-1.0% (Unique element)
+- Copper: 0.5-1.0%
+- Carbon: 0.03% max
+- Nitrogen: 0.20-0.30% (High N)
+
+Mechanical Properties:
+- Tensile Strength: 690 MPa minimum (100 ksi)
+- Yield Strength: 450 MPa minimum (65 ksi)
+- Elongation: 25% minimum
+- Hardness: 300 HB typical
+
+Heat Treatment: 2010°F (1100°C) minimum, water quench or rapid cool
+
+Applications: Severe offshore oil and gas, seawater injection systems, acidic chloride chemical processing, high-temperature corrosive environments, subsea manifolds and valves
+
+Structure: Super Duplex (40-60% Ferrite + Balance Austenite)
+
+Corrosion Resistance: Outstanding - Tungsten and high nitrogen provide exceptional resistance to pitting and crevice corrosion
+
+Special Notes: Premium super duplex grade for the most demanding applications. Tungsten addition significantly improves corrosion resistance.
+
+---
+
+TEMPERATURE SERVICE LIMITS
+All ASTM A890 duplex grades:
+- Minimum Temperature: -50°C (-58°F)
+- Maximum Temperature: 300-315°C (572-600°F)
+
+IMPORTANT: Do NOT use duplex stainless steels below -50°C due to ferrite embrittlement. For cryogenic applications below -100°C, use austenitic stainless steels from ASTM A182 (F304, F316L, F321, F347).
+
+---
+
+CORROSION PERFORMANCE
+Pitting Resistance Equivalent Number (PREN):
+PREN = %Cr + 3.3×%Mo + 16×%N
+
+Higher PREN = Better pitting/crevice corrosion resistance
+
+Estimated PREN values:
+- Grade 1A: ~35-38
+- Grade 1B: ~37-40 (nitrogen boost)
+- Grade 1C: ~38-42 (high Mo)
+- Grade 4A (2205): ~35-37 (industry standard)
+- Grade 5A: ~42-45 (high Mo and N)
+- Grade 6A: ~40-43 (W and N enhanced)
+
+For seawater: PREN >35 recommended
+For severe marine: PREN >40 preferred
+
+---
+
+SELECTION GUIDELINES
+
+Use Grade 4A (CD3MN/2205) when:
+- General offshore oil and gas service
+- Standard seawater exposure
+- Cost-effective duplex performance needed
+- Moderate stress (up to 400 MPa)
+
+Use Grade 1A/1B (CD4MCu) when:
+- Copper content enhances resistance
+- Marine pumps and valves
+- Brackish water service
+
+Use Grade 5A (CE3MN) when:
+- Highest strength required (515 MPa yield)
+- Deep subsea high-pressure applications
+- Severe corrosion + high stress combination
+
+Use Grade 6A (CD3MWCuN) when:
+- Most severe corrosive environment
+- Acidic chloride solutions
+- Premium performance justified
+- Subsea critical components
+
+---
+
+MANUFACTURING NOTES
+All grades require solution annealing to achieve proper duplex microstructure.
+Rapid cooling (water quench) prevents detrimental phase formation.
+Ferrite content must be controlled to 30-60% for optimal properties.
+
+TESTING REQUIREMENTS
+- Tensile testing per ASTM A370
+- Ferrite content measurement
+- Corrosion testing for critical applications
+- Charpy impact testing may be specified
+
+EQUIVALENT SPECIFICATIONS
+- NACE MR0175/ISO 15156 compliant (sour service)
+- EN 10283 (European standard)
+- ACI designations (CD3MN, CD4MCu, CE3MN, etc.)
+
+This specification ensures high-quality duplex stainless steel castings for demanding marine, offshore, and chemical processing applications.

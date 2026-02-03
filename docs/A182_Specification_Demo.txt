@@ -1,0 +1,577 @@
+ASTM A182/A182M-12a Standard Specification
+  
+Standard Specification for Forged or Rolled Alloy and Stainless Steel 
+Pipe Flanges, Forged Fittings, and Valves and Parts for High-Temperature Service
+
+This specification covers forged or rolled pipe flanges, forged fittings, and valves 
+for use in pressure systems at high temperatures. Materials range from low alloy steels 
+to high-performance duplex and super austenitic stainless steels.
+
+MATERIAL CATEGORIES:
+- Low Alloy Steels: F11, F22, F91, F92 (high temperature service)
+- Martensitic Stainless: F6a, F6NM (moderate corrosion + strength)
+- Austenitic Stainless: F304, F304L, F316, F316L, F321, F347, F310 (cryogenic to high temp)
+- Duplex Stainless: F51, F53 (high strength + excellent corrosion)
+- Super Austenitic: F20, F44, F904L (ultimate corrosion resistance)
+
+===================================================================
+AUSTENITIC STAINLESS STEELS (MARINE & CRYOGENIC CAPABLE)
+===================================================================
+
+GRADE F304 (UNS S30400) - 18% Chromium, 8% Nickel
+Designation: 18-8 General Purpose Austenitic
+
+Chemical Composition:
+- Chromium: 18.0-20.0%
+- Nickel: 8.0-11.0%
+- Carbon: 0.08% max
+- Manganese: 2.00% max
+- Silicon: 1.00% max
+
+Mechanical Properties:
+- Tensile Strength: 515 MPa minimum (75 ksi)
+- Yield Strength: 205 MPa minimum (30 ksi)
+- Elongation: 30% minimum
+- Reduction of Area: 50% minimum
+
+Heat Treatment:
+- Solution anneal at 1900°F (1040°C) minimum
+- Rapid quench below 500°F (260°C) in water
+
+Temperature Range: -196°C to 870°C (cryogenic to high temperature)
+
+Corrosion Resistance: Excellent - General-purpose stainless steel
+
+Applications:
+- Chemical processing equipment
+- Food and beverage industry
+- Cryogenic storage tanks (down to -196°C)
+- Pharmaceutical equipment
+- General-purpose corrosion resistance
+
+Standards: ASTM A182, ASME SA-182, ASTM A276
+
+Structure: Austenitic (Face-Centered Cubic)
+
+---
+
+GRADE F304L (UNS S30403) - 18% Chromium, 8% Nickel, Low Carbon
+Designation: 18-8 Low Carbon Austenitic
+
+Chemical Composition:
+- Chromium: 18.0-20.0%
+- Nickel: 8.0-13.0%
+- Carbon: 0.030% max (LOW CARBON)
+- Manganese: 2.00% max
+
+Mechanical Properties:
+- Tensile Strength: 485 MPa minimum (70 ksi)
+- Yield Strength: 170 MPa minimum (25 ksi)
+- Elongation: 30% minimum
+- Reduction of Area: 50% minimum
+
+Heat Treatment:
+- Solution anneal at 1900°F (1040°C) minimum
+- Rapid quench below 500°F in water
+
+Temperature Range: -196°C to 870°C (cryogenic capable)
+
+Corrosion Resistance: Excellent - Enhanced weld corrosion resistance
+
+Applications:
+- Welded structures (no intergranular corrosion)
+- Cryogenic applications (LNG, liquid nitrogen)
+- Chemical processing
+- Marine environments
+- Food processing equipment
+
+Standards: ASTM A182, ASME SA-182, EN 1.4306
+
+Structure: Austenitic (FCC)
+
+Weldability: Excellent - Superior to F304 in as-welded condition
+
+---
+
+GRADE F316 (UNS S31600) - 18% Chromium, 10% Nickel, 2-3% Molybdenum
+Designation: 18-10-2 Molybdenum-Enhanced Austenitic
+
+Chemical Composition:
+- Chromium: 16.0-18.0%
+- Nickel: 10.0-14.0%
+- Molybdenum: 2.00-3.00% (PITTING RESISTANCE)
+- Carbon: 0.08% max
+
+Mechanical Properties:
+- Tensile Strength: 515 MPa minimum (75 ksi)
+- Yield Strength: 205 MPa minimum (30 ksi)
+- Elongation: 30% minimum
+- Reduction of Area: 50% minimum
+
+Heat Treatment:
+- Solution anneal at 1900°F (1040°C) minimum
+- Rapid quench below 500°F in water
+
+Temperature Range: -196°C to 870°C (cryogenic capable)
+
+Corrosion Resistance: Excellent - Enhanced pitting resistance vs F304
+
+Applications:
+- Marine environments (seawater)
+- Chemical processing (aggressive media)
+- Pharmaceutical equipment
+- Pulp and paper industry
+- Oil and gas equipment
+
+Standards: ASTM A182, ASME SA-182, EN 1.4401
+
+Structure: Austenitic (FCC)
+
+Cost: Medium-High
+
+---
+
+GRADE F316L (UNS S31603) - 18% Chromium, 10% Nickel, 2-3% Molybdenum, Low Carbon
+Designation: MOST POPULAR MARINE STAINLESS STEEL
+
+Chemical Composition:
+- Chromium: 16.0-18.0%
+- Nickel: 10.0-15.0%
+- Molybdenum: 2.00-3.00% (PITTING RESISTANCE)
+- Carbon: 0.030% max (LOW CARBON)
+
+Mechanical Properties:
+- Tensile Strength: 485 MPa minimum (70 ksi)
+- Yield Strength: 170 MPa minimum (25 ksi)
+- Elongation: 30% minimum
+- Reduction of Area: 50% minimum
+
+Heat Treatment:
+- Solution anneal at 1900°F (1040°C) minimum
+- Rapid quench below 500°F in water
+
+Temperature Range: -196°C to 870°C (cryogenic capable)
+
+Corrosion Resistance: Excellent - Best welded corrosion resistance
+
+Weldability: Excellent - MOST POPULAR STAINLESS STEEL WORLDWIDE
+
+Applications:
+- Marine and offshore structures
+- Welded equipment in corrosive service
+- Chemical tankers
+- Desalination plants
+- Pharmaceutical clean rooms
+- Seawater piping systems
+- Most versatile stainless steel grade
+
+Standards: ASTM A182, ASME SA-182, EN 1.4404
+
+Structure: Austenitic (FCC)
+
+Cost: Medium-High
+
+SPECIAL NOTE: F316L is the MOST WIDELY USED marine stainless steel due to:
+1. Low carbon prevents sensitization in welds
+2. Molybdenum enhances pitting resistance in chlorides
+3. No post-weld heat treatment required
+4. Excellent fabricability
+
+---
+
+GRADE F321 (UNS S32100) - 18% Chromium, 8% Nickel, Titanium-Stabilized
+Designation: 18-8 Titanium-Stabilized Austenitic
+
+Chemical Composition:
+- Chromium: 17.0-19.0%
+- Nickel: 9.0-12.0%
+- Titanium: minimum 5×Carbon + 0.10% (STABILIZER)
+- Carbon: 0.08% max
+
+Mechanical Properties:
+- Tensile Strength: 515 MPa minimum (75 ksi)
+- Yield Strength: 205 MPa minimum (30 ksi)
+- Elongation: 30% minimum
+
+Heat Treatment:
+- Solution anneal at 1900°F (1040°C) minimum
+- Rapid quench below 500°F in water
+
+Temperature Range: -196°C to 870°C (cryogenic and high-temperature)
+
+Corrosion Resistance: Excellent - Prevents intergranular corrosion
+
+Applications:
+- High-temperature service (426-870°C)
+- Aircraft exhaust manifolds
+- Thermal fatigue resistance
+- Expansion joints
+- Furnace parts
+
+Standards: ASTM A182, ASME SA-182, EN 1.4541
+
+Structure: Austenitic (FCC)
+
+---
+
+GRADE F347 (UNS S34700) - 18% Chromium, 8% Nickel, Columbium-Stabilized
+Designation: 18-8 Columbium/Niobium-Stabilized Austenitic
+
+Chemical Composition:
+- Chromium: 17.0-20.0%
+- Nickel: 9.0-13.0%
+- Columbium/Niobium: minimum 8×Carbon + 0.10% (STABILIZER)
+- Carbon: 0.08% max
+
+Mechanical Properties:
+- Tensile Strength: 515 MPa minimum (75 ksi)
+- Yield Strength: 205 MPa minimum (30 ksi)
+- Elongation: 30% minimum
+
+Heat Treatment:
+- Solution anneal at 1900°F (1040°C) minimum
+- Rapid quench below 500°F in water
+
+Temperature Range: -196°C to 870°C (cryogenic and high-temperature)
+
+Corrosion Resistance: Excellent - Superior high-temp stability vs F321
+
+Applications:
+- High-temperature applications (better than F321)
+- Petrochemical equipment
+- Heat exchangers
+- Pressure vessels for elevated temperature
+- Superheater tubing
+
+Standards: ASTM A182, ASME SA-182, EN 1.4550
+
+Structure: Austenitic (FCC)
+
+---
+
+GRADE F310 (UNS S31000) - 25% Chromium, 20% Nickel
+Designation: 25-20 High Temperature Austenitic
+
+Chemical Composition:
+- Chromium: 24.0-26.0%
+- Nickel: 19.0-22.0%
+- Carbon: 0.25% max
+
+Mechanical Properties:
+- Tensile Strength: 515 MPa minimum (75 ksi)
+- Yield Strength: 205 MPa minimum (30 ksi)
+- Elongation: 30% minimum
+
+Heat Treatment:
+- Solution anneal at 2050°F (1120°C) minimum
+- Rapid quench
+
+Temperature Range: -196°C to 1150°C (EXTREME HEAT RESISTANCE)
+
+Corrosion Resistance: Excellent - High temperature oxidation
+
+Applications:
+- Extreme high-temperature service (up to 1150°C)
+- Heat treatment furnace fixtures
+- Thermal cycling applications
+- Oxidizing atmospheres
+- Best heat resistance of common stainless steels
+
+Standards: ASTM A182, ASME SA-182, EN 1.4845
+
+Structure: Austenitic (FCC)
+
+Cost: High
+
+---
+
+GRADE F317L (UNS S31703) - 19% Chromium, 13% Nickel, 3.5% Molybdenum, Low Carbon
+Designation: 18-11-3.5 High Molybdenum Austenitic
+
+Chemical Composition:
+- Chromium: 18.0-20.0%
+- Nickel: 11.0-15.0%
+- Molybdenum: 3.0-4.0% (HIGH Mo FOR PITTING RESISTANCE)
+- Carbon: 0.030% max
+
+Mechanical Properties:
+- Tensile Strength: 485 MPa minimum (70 ksi)
+- Yield Strength: 170 MPa minimum (25 ksi)
+- Elongation: 30% minimum
+
+Heat Treatment:
+- Solution anneal at 1900°F (1040°C) minimum
+- Rapid quench
+
+Temperature Range: -196°C to 870°C (cryogenic capable)
+
+Corrosion Resistance: Excellent - Superior pitting/crevice resistance
+
+Applications:
+- Chemical processing (acidic chlorides)
+- Pulp and paper bleaching
+- Marine environments
+- Better corrosion resistance than F316L
+- Pharmaceutical equipment
+
+Standards: ASTM A182, ASME SA-182, EN 1.4438
+
+Structure: Austenitic (FCC)
+
+Cost: High
+
+===================================================================
+DUPLEX STAINLESS STEELS (HIGH STRENGTH + CORROSION)
+===================================================================
+
+GRADE F51 (UNS S31803) - 22% Chromium, 5.5% Nickel, 3% Molybdenum, Nitrogen
+Designation: 2205 DUPLEX (Most Common Duplex Grade)
+
+Chemical Composition:
+- Chromium: 21.0-23.0%
+- Nickel: 4.5-6.5%
+- Molybdenum: 2.5-3.5%
+- Nitrogen: 0.08-0.20%
+- Carbon: 0.030% max
+
+Mechanical Properties:
+- Tensile Strength: 620 MPa minimum (90 ksi)
+- Yield Strength: 450 MPa minimum (65 ksi) - DOUBLE austenitic strength
+- Elongation: 25% minimum
+- Reduction of Area: 45% minimum
+
+Heat Treatment:
+- Solution anneal at 1870°F (1020°C) minimum
+- Rapid quench below 500°F in water
+
+Temperature Range: -50°C to 315°C (NOT cryogenic capable)
+
+Corrosion Resistance: Excellent - Chloride SCC resistance
+
+Weldability: Good - Heat input control required
+
+Applications:
+- Offshore oil and gas platforms
+- Subsea pipelines
+- Pressure vessels (weight savings)
+- Marine and chemical processing
+- Desalination plants
+- Cost-effective alternative to 316L with 2× strength
+
+Standards: ASTM A182, ASME SA-182, EN 1.4462
+
+Structure: Duplex (50% Ferrite + 50% Austenite)
+
+Cost: High
+
+IMPORTANT: NOT suitable for cryogenic service below -50°C (ferrite embrittlement)
+
+---
+
+GRADE F53 (UNS S32750) - 25% Chromium, 7% Nickel, 4% Molybdenum, Nitrogen
+Designation: 2507 SUPER DUPLEX (Highest Strength A182 Grade)
+
+Chemical Composition:
+- Chromium: 24.0-26.0%
+- Nickel: 6.0-8.0%
+- Molybdenum: 3.0-5.0%
+- Nitrogen: 0.24-0.32%
+- Carbon: 0.030% max
+
+Mechanical Properties:
+- Tensile Strength: 800 MPa minimum (116 ksi) - HIGHEST IN A182
+- Yield Strength: 550 MPa minimum (80 ksi) - HIGHEST IN A182
+- Elongation: 15% minimum
+- Hardness: 310 HBW max
+
+Heat Treatment:
+- Solution anneal at 1900°F (1040°C) minimum
+- Rapid quench below 500°F in water
+
+Temperature Range: -50°C to 250°C (NOT cryogenic capable)
+
+Corrosion Resistance: Outstanding - Severe chloride environments
+
+Weldability: Good - Careful heat input control
+
+Applications:
+- Deepwater oil and gas production
+- Subsea manifolds and trees
+- High-stress corrosive environments
+- Offshore platforms (North Sea)
+- Chemical tankers
+- Extreme service conditions
+
+Standards: ASTM A182, ASME SA-182, EN 1.4410, NACE MR0175
+
+Structure: Super Duplex (50% Ferrite + 50% Austenite)
+
+Cost: Premium
+
+IMPORTANT: NOT suitable for cryogenic service below -50°C (ferrite embrittlement)
+
+===================================================================
+SUPER AUSTENITIC STAINLESS STEELS (ULTIMATE CORROSION)
+===================================================================
+
+GRADE F904L (UNS N08904) - 21% Chromium, 26% Nickel, 4.5% Molybdenum
+Designation: ULTIMATE CORROSION RESISTANCE
+
+Chemical Composition:
+- Nickel: 23.0-28.0%
+- Chromium: 19.0-23.0%
+- Molybdenum: 4.0-5.0%
+- Copper: 1.00-2.00%
+- Carbon: 0.020% max
+- Nitrogen: 0.10% max
+
+Mechanical Properties:
+- Tensile Strength: 690 MPa minimum (100 ksi)
+- Yield Strength: 345 MPa minimum (50 ksi)
+- Elongation: 35% minimum
+
+Heat Treatment:
+- Solution anneal at 2010-2100°F (1100-1150°C)
+- Rapid quench
+
+Temperature Range: -196°C to 400°C (cryogenic capable)
+
+Corrosion Resistance: Ultimate - Phosphoric/sulfuric acid service
+
+Weldability: Excellent
+
+Applications:
+- Phosphoric acid production
+- Sulfuric acid handling
+- Seawater and chloride environments
+- Chemical processing (most aggressive)
+- Marine scrubber systems
+- Top-tier corrosion resistance
+
+Standards: ASTM A182, ASME SA-182, EN 1.4539
+
+Structure: Austenitic (High Nickel)
+
+Cost: Premium
+
+===================================================================
+LOW ALLOY STEELS (HIGH TEMPERATURE SERVICE)
+===================================================================
+
+GRADE F22 Class 1 (UNS K21590) - 2.25% Chromium, 1% Molybdenum
+Designation: 2.25Cr-1Mo Low Alloy Steel
+
+Chemical Composition:
+- Chromium: 2.00-2.50%
+- Molybdenum: 0.87-1.13%
+- Carbon: 0.05-0.15%
+- Manganese: 0.30-0.60%
+
+Mechanical Properties:
+- Tensile Strength: 415 MPa minimum (60 ksi)
+- Yield Strength: 205 MPa minimum (30 ksi)
+- Elongation: 20% minimum
+- Hardness: 170 HBW max
+
+Heat Treatment:
+- Normalize & Temper at 1250°F (675°C) minimum OR
+- Anneal at 1650°F (900°C)
+- Air cool
+
+Temperature Range: -29°C to 649°C (1200°F)
+
+Corrosion Resistance: Good - H2S environments, high temperature
+
+Weldability: Good - PWHT recommended
+
+Applications:
+- High-temperature service up to 649°C
+- Hydrogen service applications
+- Hydrocracking and hydrotreating units
+- Steam piping systems
+- Refinery pressure vessels
+
+Standards: ASTM A182, ASME SA-182, NACE MR0175/ISO 15156
+
+Structure: Ferritic-Pearlitic
+
+Cost: Medium
+
+---
+
+GRADE F91 (UNS K90901) - 9% Chromium, 1% Molybdenum, Vanadium, Niobium
+Designation: ADVANCED 9Cr-1Mo-V-Nb POWER PLANT STEEL
+
+Chemical Composition:
+- Chromium: 8.00-9.50%
+- Molybdenum: 0.85-1.05%
+- Carbon: 0.08-0.12%
+- Vanadium: 0.18-0.25%
+- Niobium: 0.06-0.10%
+- Nitrogen: 0.030-0.070%
+
+Mechanical Properties:
+- Tensile Strength: 620 MPa minimum (90 ksi)
+- Yield Strength: 415 MPa minimum (60 ksi)
+- Elongation: 20% minimum
+- Hardness: 190-248 HBW
+
+Heat Treatment:
+- Normalize at 1900-1975°F (1040-1080°C)
+- Temper at 1350-1470°F (730-800°C)
+- Air cool or rapid cool
+
+Temperature Range: -29°C to 650°C (1200°F)
+
+Corrosion Resistance: Excellent - Steam oxidation resistance
+
+Weldability: Good - PWHT mandatory
+
+Applications:
+- Ultra-supercritical power plants
+- High-temperature service up to 650°C
+- Steam headers and main steam piping
+- Advanced power generation
+- Cutting-edge material for modern plants
+
+Standards: ASTM A182, ASME SA-182, ASME Code Case 1943
+
+Structure: Tempered Martensitic
+
+Cost: High
+
+===================================================================
+CRITICAL TEMPERATURE LIMITS & MATERIAL SELECTION
+===================================================================
+
+CRYOGENIC SERVICE (-196°C to -100°C):
+✅ ONLY AUSTENITIC GRADES:
+   - F304, F304L (general purpose)
+   - F316, F316L (marine/corrosive)
+   - F321, F347 (stabilized)
+   - F310 (high temperature)
+   - F317L (high Mo)
+   - F904L (super austenitic)
+
+❌ NEVER USE DUPLEX FOR CRYOGENIC:
+   - F51, F53 FAIL below -50°C (ferrite embrittlement)
+
+MARINE/SEAWATER SERVICE:
+🥇 FIRST CHOICE: F316L (most popular worldwide)
+🥈 ENHANCED: F317L (higher Mo content)
+🥉 EXTREME: F904L (phosphoric acid, chlorides)
+💪 HIGH STRENGTH: F51 (2205 duplex, 2× strength)
+
+HIGH TEMPERATURE SERVICE:
+- F22: Up to 649°C (economical)
+- F91: Up to 650°C (advanced power plants)
+- F310: Up to 1150°C (extreme heat)
+
+OFFSHORE OIL & GAS:
+- Moderate: F316L (standard)
+- High Stress: F51 (2205 duplex)
+- Severe: F53 (2507 super duplex)
+
+This specification covers the most critical ASTM A182 grades for pressure systems, 
+forged flanges, fittings, and valves. All data verified against ASTM A182/A182M-12a 
+standard specification.
