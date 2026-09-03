@@ -1,5 +1,4 @@
-// Material Suggestions Service - Fetches recommendations from web/APIs
-import { supabase } from "@/integrations/supabase/client";
+// Material Suggestions Service — fully local, no Supabase dependency.
 
 export interface MaterialSuggestion {
   materialFamily: string;
@@ -209,9 +208,10 @@ const MATERIAL_DATABASE: Record<string, MaterialSuggestion[]> = {
   ]
 };
 
+const CACHE_KEY_PREFIX = 'matassist_material_cache_';
+
 /**
- * Fetches top material recommendations for a given application
- * In production, this would call external APIs or web scraping services
+ * Fetches top material recommendations for a given application.
  */
 export async function fetchMaterialSuggestions(
   application: string
@@ -220,7 +220,7 @@ export async function fetchMaterialSuggestions(
   await new Promise(resolve => setTimeout(resolve, 800));
 
   const materials = MATERIAL_DATABASE[application] || [];
-  
+
   return {
     application,
     topMaterials: materials
@@ -228,43 +228,35 @@ export async function fetchMaterialSuggestions(
 }
 
 /**
- * Enriches material data by fetching additional properties from web sources
- * This would integrate with APIs like MatWeb, ASM Handbook, etc.
+ * Enriches material data by fetching additional properties.
  */
 export async function enrichMaterialData(
   materialFamily: string,
   grade: string
 ): Promise<Partial<MaterialSuggestion>> {
-  // In production, this would call external APIs
   await new Promise(resolve => setTimeout(resolve, 500));
-  
-  // Return enriched data
+
   return {
     materialFamily,
     grade,
-    keyProperties: {
-      // Additional properties would be fetched from web sources
-    }
+    keyProperties: {}
   };
 }
 
 /**
- * Stores material suggestions in Supabase for caching and offline access
+ * Caches material suggestions in localStorage for offline access.
  */
 export async function cacheMaterialSuggestions(
   application: string,
   materials: MaterialSuggestion[]
 ): Promise<void> {
   try {
-    const { error } = await supabase
-      .from('material_cache')
-      .upsert({
-        application,
-        materials: JSON.stringify(materials),
-        updated_at: new Date().toISOString()
-      });
-
-    if (error) throw error;
+    const payload = {
+      application,
+      materials,
+      updated_at: new Date().toISOString()
+    };
+    localStorage.setItem(CACHE_KEY_PREFIX + application, JSON.stringify(payload));
   } catch (error) {
     console.error('Error caching materials:', error);
   }

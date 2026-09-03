@@ -1,29 +1,15 @@
-import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, LogOut, User, Home, Layers, BarChart3, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/integrations/supabase/client";
-import { User as SupabaseUser } from "@supabase/supabase-js";
+
+// Demo mode: always show a static demo user
+const DEMO_USER = { email: "demo@matassist.ai" };
 
 export function Header() {
-  const [user, setUser] = useState<SupabaseUser | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      setUser(session?.user ?? null);
-    });
-
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
+  const handleLogout = () => {
     navigate("/auth");
   };
 
@@ -39,14 +25,14 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container flex h-16 items-center justify-between">
-        <div 
-          className="flex items-center gap-3 cursor-pointer" 
+        <div
+          className="flex items-center gap-3 cursor-pointer"
           onClick={() => navigate("/")}
         >
           <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-primary">
-            <img 
-              src="/Mlogo.png" 
-              alt="MatAssist AI" 
+            <img
+              src="/Mlogo.png"
+              alt="MatAssist AI"
               className="h-16 w-16 object-contain brightness-110 contrast-125 drop-shadow-sm"
               style={{ imageRendering: 'crisp-edges' }}
             />
@@ -59,10 +45,10 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
-            <Button 
+            <Button
               key={item.path}
-              variant={isActive(item.path) ? "secondary" : "ghost"} 
-              size="sm" 
+              variant={isActive(item.path) ? "secondary" : "ghost"}
+              size="sm"
               className={`text-foreground hover:bg-muted gap-2 ${isActive(item.path) ? 'bg-primary/10 text-primary' : ''}`}
               onClick={() => navigate(item.path)}
             >
@@ -73,27 +59,14 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          {user ? (
-            <>
-              <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted text-sm">
-                <User className="h-4 w-4 text-muted-foreground" />
-                <span className="text-foreground">{user.email?.split('@')[0]}</span>
-              </div>
-              <Button variant="outline" size="sm" onClick={handleLogout} className="hidden md:flex">
-                <LogOut className="h-4 w-4 mr-2" />
-                Sign Out
-              </Button>
-            </>
-          ) : (
-            <>
-              <Button variant="outline" size="sm" className="hidden md:flex" onClick={() => navigate("/auth")}>
-                Sign In
-              </Button>
-              <Button size="sm" className="hidden md:flex bg-primary hover:bg-primary/90" onClick={() => navigate("/auth")}>
-                Get Started
-              </Button>
-            </>
-          )}
+          <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted text-sm">
+            <User className="h-4 w-4 text-muted-foreground" />
+            <span className="text-foreground">{DEMO_USER.email.split('@')[0]}</span>
+          </div>
+          <Button variant="outline" size="sm" onClick={handleLogout} className="hidden md:flex">
+            <LogOut className="h-4 w-4 mr-2" />
+            Sign Out
+          </Button>
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />
           </Button>

@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Atom, Mail, Lock, User, ArrowRight, Loader2 } from "lucide-react";
+import { Mail, Lock, User, ArrowRight, Loader2 } from "lucide-react";
 import { z } from "zod";
 
 const emailSchema = z.string().email("Please enter a valid email address");
@@ -22,117 +21,47 @@ const Auth = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session?.user) {
-        navigate("/");
-      }
-    });
-
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
-        navigate("/");
-      }
-    });
-
-    return () => subscription.unsubscribe();
-  }, [navigate]);
-
   const validateForm = () => {
     const newErrors: { email?: string; password?: string } = {};
-    
+
     const emailResult = emailSchema.safeParse(email);
     if (!emailResult.success) {
       newErrors.email = emailResult.error.errors[0].message;
     }
-    
+
     const passwordResult = passwordSchema.safeParse(password);
     if (!passwordResult.success) {
       newErrors.password = passwordResult.error.errors[0].message;
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
-    
+
     setIsLoading(true);
 
-    try {
-      if (isLogin) {
-        const { error } = await supabase.auth.signInWithPassword({
-          email: email.trim(),
-          password,
-        });
-        
-        if (error) {
-          if (error.message.includes("Invalid login credentials")) {
-            toast({
-              variant: "destructive",
-              title: "Login Failed",
-              description: "Invalid email or password. Please try again.",
-            });
-          } else {
-            toast({
-              variant: "destructive",
-              title: "Login Failed",
-              description: error.message,
-            });
-          }
-        } else {
-          toast({
-            title: "Welcome back!",
-            description: "You have successfully logged in.",
-          });
-        }
-      } else {
-        const redirectUrl = `${window.location.origin}/`;
-        
-        const { error } = await supabase.auth.signUp({
-          email: email.trim(),
-          password,
-          options: {
-            emailRedirectTo: redirectUrl,
-            data: {
-              full_name: fullName,
-            },
-          },
-        });
-        
-        if (error) {
-          if (error.message.includes("already registered")) {
-            toast({
-              variant: "destructive",
-              title: "Sign Up Failed",
-              description: "This email is already registered. Please log in instead.",
-            });
-          } else {
-            toast({
-              variant: "destructive",
-              title: "Sign Up Failed",
-              description: error.message,
-            });
-          }
-        } else {
-          toast({
-            title: "Account created!",
-            description: "You can now access the Material Assistant.",
-          });
-        }
-      }
-    } catch (error) {
+    // Simulate a brief network delay for UX realism, then succeed locally
+    await new Promise((resolve) => setTimeout(resolve, 800));
+
+    if (isLogin) {
       toast({
-        variant: "destructive",
-        title: "Error",
-        description: "An unexpected error occurred. Please try again.",
+        title: "Welcome back!",
+        description: "You have successfully logged in.",
       });
-    } finally {
-      setIsLoading(false);
+    } else {
+      toast({
+        title: "Account created!",
+        description: "You can now access the Material Assistant.",
+      });
     }
+
+    setIsLoading(false);
+    navigate("/");
   };
 
   return (
@@ -146,16 +75,16 @@ const Auth = () => {
       <div className="w-full max-w-md relative z-10 animate-slide-up">
         {/* Logo Section */}
         <div className="text-center mb-8">
-  <div className="inline-flex items-center justify-center w-48 h-48 rounded-xl bg-primary mb-4 p-2">
-    <img 
-      src="/Mlogo.png" 
-      alt="MatAssist AI" 
-      className="w-40 h-40 object-contain"
-    />
-  </div>
-  <h1 className="text-2xl font-bold text-foreground">Material Assistant</h1>
-  <p className="text-muted-foreground mt-1">AI-Powered Material Selection</p>
-</div>
+          <div className="inline-flex items-center justify-center w-48 h-48 rounded-xl bg-primary mb-4 p-2">
+            <img
+              src="/Mlogo.png"
+              alt="MatAssist AI"
+              className="w-40 h-40 object-contain"
+            />
+          </div>
+          <h1 className="text-2xl font-bold text-foreground">Material Assistant</h1>
+          <p className="text-muted-foreground mt-1">AI-Powered Material Selection</p>
+        </div>
 
         <Card className="shadow-elevated border-border/50">
           <CardHeader className="text-center pb-4">
@@ -163,8 +92,8 @@ const Auth = () => {
               {isLogin ? "Welcome Back" : "Create Account"}
             </CardTitle>
             <CardDescription>
-              {isLogin 
-                ? "Sign in to continue to your dashboard" 
+              {isLogin
+                ? "Sign in to continue to your dashboard"
                 : "Get started with Material Assistant"}
             </CardDescription>
           </CardHeader>
@@ -259,8 +188,8 @@ const Auth = () => {
                 }}
                 className="text-sm text-primary hover:underline font-medium"
               >
-                {isLogin 
-                  ? "Don't have an account? Sign up" 
+                {isLogin
+                  ? "Don't have an account? Sign up"
                   : "Already have an account? Sign in"}
               </button>
             </div>

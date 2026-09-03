@@ -1,13 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
+import { useSearchParams } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Send, Bot, User, Loader2, ExternalLink, ThumbsUp, ThumbsDown, Copy, CheckCircle } from "lucide-react";
+import { Send, Bot, Copy, CheckCircle, ThumbsUp, ThumbsDown, ExternalLink, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -28,14 +27,11 @@ const suggestedQuestions = [
   "Recommend materials for -196°C operating temperature",
 ];
 
-const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/matbot-chat`;
-
 const Chat = () => {
   const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
   const app = searchParams.get('app') || 'cryogenic';
   const { toast } = useToast();
-  
+
   const [messages, setMessages] = useState<Message[]>(() => {
     const saved = localStorage.getItem(CHAT_STORAGE_KEY);
     if (saved) {
@@ -55,18 +51,6 @@ const Chat = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    /* Bypass auth check in Demo mode
-    const checkAuth = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) {
-        navigate("/auth");
-      }
-    };
-    checkAuth();
-    */
-  }, [navigate]);
-
-  useEffect(() => {
     localStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(messages));
   }, [messages]);
 
@@ -77,16 +61,13 @@ const Chat = () => {
   }, [messages]);
 
   const normalizeMaterial = (material: string): string => {
-    // Normalize to lowercase and standardize variations
     let normalized = material.toLowerCase().trim();
-    // Standardize Ni/Nickel variations
     normalized = normalized.replace(/\bni\b/, 'nickel');
     normalized = normalized.replace(/\s+/g, ' ');
     return normalized;
   };
 
   const extractMaterials = (content: string): string[] => {
-    // First, try to extract Rank 1 material from rankings or tables
     const rank1Patterns = [
       /(?:Rank 1|\|\s*1\s*\|)[:\s]*([A-Za-z0-9\s\-\/]+?)(?:\||\n|\*\*|,)/i,
       /^1\.\s*([A-Za-z0-9\s\-\/]+?)(?:\n|:|\*\*)/m,
@@ -103,25 +84,18 @@ const Chat = () => {
       }
     }
 
-    // Fallback: Extract materials using comprehensive patterns
     const materialPatterns = [
-      // Super duplex and duplex steels
       /(Zeron\s*\d+)/gi,
       /(Super Duplex\s*(?:SS|Steel)?\s*\d*)/gi,
       /(Duplex\s*\d+)/gi,
-      // Standard stainless steels
       /(\d{3}[A-Z]?\s*(?:stainless steel|steel|SS))/gi,
-      // Nickel alloys
       /(Inconel\s*\d+)/gi,
       /(Monel\s*\d+)/gi,
       /(Hastelloy\s*[A-Z]-?\d*)/gi,
       /(\d+%?\s*Ni(?:ckel)?\s*(?:Steel)?)/gi,
-      // Titanium
       /(Titanium\s*Grade\s*\d+)/gi,
-      // Carbon steels
       /(Carbon\s*Steel)/gi,
       /(Low\s*Carbon\s*Steel)/gi,
-      // Aluminum
       /(Aluminum\s*Alloy\s*\d+)/gi,
       /(Al\s*\d+)/gi,
     ];
@@ -140,29 +114,20 @@ const Chat = () => {
       }
     });
 
-    return Array.from(materialsMap.values()).slice(0, 1); // Return only top material
+    return Array.from(materialsMap.values()).slice(0, 1);
   };
-
-
 
   const addRankingMedals = (content: string): string => {
     let enhanced = content;
-    
-    // Add medals to "Rank 1", "Rank 2", "Rank 3" patterns
     enhanced = enhanced.replace(/\bRank 1\b/gi, '🥇 Rank 1');
     enhanced = enhanced.replace(/\bRank 2\b/gi, '🥈 Rank 2');
     enhanced = enhanced.replace(/\bRank 3\b/gi, '🥉 Rank 3');
-    
-    // Add medals to table cells starting with 1, 2, 3 (for markdown tables)
     enhanced = enhanced.replace(/(\|\s*)1(\s*\|)/g, '$1🥇 1$2');
     enhanced = enhanced.replace(/(\|\s*)2(\s*\|)/g, '$1🥈 2$2');
     enhanced = enhanced.replace(/(\|\s*)3(\s*\|)/g, '$1🥉 3$2');
-    
-    // Add medals to numbered lists (1., 2., 3. at start of line)
     enhanced = enhanced.replace(/^1\./gm, '🥇 1.');
     enhanced = enhanced.replace(/^2\./gm, '🥈 2.');
     enhanced = enhanced.replace(/^3\./gm, '🥉 3.');
-    
     return enhanced;
   };
 
@@ -174,7 +139,6 @@ const Chat = () => {
     setInput('');
     setIsLoading(true);
 
-    // Hardcoded responses purely for demo presentation
     setTimeout(() => {
       let mockContent = "";
       const lowerInput = userMessage.content.toLowerCase();
@@ -190,7 +154,7 @@ const Chat = () => {
       }
 
       setMessages(prev => [
-        ...prev, 
+        ...prev,
         { id: crypto.randomUUID(), role: 'assistant', content: mockContent, materials: extractMaterials(mockContent) }
       ]);
       setIsLoading(false);
@@ -220,9 +184,9 @@ const Chat = () => {
                 <div key={message.id} className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                   {message.role === 'assistant' && (
                     <div className="w-20 h-20 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
-                      <img 
-                        src="/Mlogo.png" 
-                        alt="MatAssist AI" 
+                      <img
+                        src="/Mlogo.png"
+                        alt="MatAssist AI"
                         className="h-16 w-16 object-contain brightness-110 contrast-125"
                         style={{ imageRendering: 'crisp-edges' }}
                       />
@@ -246,28 +210,28 @@ const Chat = () => {
                         <Button variant="ghost" size="icon" className="h-7 w-7"><ThumbsUp className="h-3.5 w-3.5" /></Button>
                         <Button variant="ghost" size="icon" className="h-7 w-7"><ThumbsDown className="h-3.5 w-3.5" /></Button>
                         <div className="flex-1" />
-                        <a 
-                          href={`https://www.google.com/search?q=${encodeURIComponent((message.materials?.[0] || message.content.slice(0, 100)) + ' material properties')}`} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href={`https://www.google.com/search?q=${encodeURIComponent((message.materials?.[0] || message.content.slice(0, 100)) + ' material properties')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1"
                         >
                           Google <ExternalLink className="h-3 w-3" />
                         </a>
                         <span className="text-muted-foreground">•</span>
-                        <a 
-                          href={`https://scholar.google.com/scholar?q=${encodeURIComponent((message.materials?.[0] || message.content.slice(0, 100)) + ' material properties research')}`} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href={`https://scholar.google.com/scholar?q=${encodeURIComponent((message.materials?.[0] || message.content.slice(0, 100)) + ' material properties research')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1"
                         >
                           Scholar <ExternalLink className="h-3 w-3" />
                         </a>
                         <span className="text-muted-foreground">•</span>
-                        <a 
-                          href={`https://www.matweb.com/search/QuickText.aspx?SearchText=${encodeURIComponent(message.materials?.[0] || message.content.slice(0, 50))}`} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href={`https://www.matweb.com/search/QuickText.aspx?SearchText=${encodeURIComponent(message.materials?.[0] || message.content.slice(0, 50))}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1"
                         >
                           MatWeb <ExternalLink className="h-3 w-3" />
@@ -277,9 +241,9 @@ const Chat = () => {
                   </div>
                   {message.role === 'user' && (
                     <div className="w-20 h-20 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                      <img 
-                        src="/Mlogo.png" 
-                        alt="MatAssist AI" 
+                      <img
+                        src="/Mlogo.png"
+                        alt="MatAssist AI"
                         className="h-16 w-16 object-contain brightness-110 contrast-125"
                         style={{ imageRendering: 'crisp-edges' }}
                       />

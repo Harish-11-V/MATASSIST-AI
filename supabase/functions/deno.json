@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "lib": ["deno.window"],
-    "types": [
-      "https://deno.land/x/types/deploy/v1.7/index.d.ts"
-    ]
-  }
-}
