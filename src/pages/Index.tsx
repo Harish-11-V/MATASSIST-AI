@@ -15,6 +15,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    /* Bypass auth check in Demo mode
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
@@ -31,6 +32,7 @@ const Index = () => {
     });
 
     return () => subscription.unsubscribe();
+    */
   }, [navigate]);
 
   return (

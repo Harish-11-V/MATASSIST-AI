@@ -21,44 +21,21 @@ import A182Demo from "./pages/A182Demo";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [session, setSession] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // Bypass auth login screen for Demo Mode
+  const session = { user: { id: "demo-user" } };
+  const loading = false;
+  const error = null;
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (loading) {
-        console.error("Auth check timed out");
-        setLoading(false);
-      }
-    }, 5000);
-
-    supabase.auth.getSession()
-      .then(({ data: { session }, error }) => {
-        if (error) {
-          console.error("Supabase auth error:", error);
-          setError(error.message);
-        }
-        setSession(session);
-        setLoading(false);
-        clearTimeout(timeout);
-      })
-      .catch((err) => {
-        console.error("Failed to get session:", err);
-        setError(err.message);
-        setLoading(false);
-        clearTimeout(timeout);
-      });
-
+    // Disabled auth checks for demo
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
+      // setSession(session);
     });
 
     return () => {
       subscription.unsubscribe();
-      clearTimeout(timeout);
     };
   }, []);
 
@@ -91,7 +68,7 @@ const App = () => {
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Routes>
           <Route path="/" element={session ? <Index /> : <Navigate to="/auth" replace />} />
           <Route path="/auth" element={session ? <Navigate to="/" replace /> : <Auth />} />

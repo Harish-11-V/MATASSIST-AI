@@ -146,11 +146,11 @@ const Auth = () => {
       <div className="w-full max-w-md relative z-10 animate-slide-up">
         {/* Logo Section */}
         <div className="text-center mb-8">
-  <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary mb-4">
+  <div className="inline-flex items-center justify-center w-48 h-48 rounded-xl bg-primary mb-4 p-2">
     <img 
-      src="/lt-logo.png" 
-      alt="L&T Technology Services" 
-      className="w-10 h-10 object-contain"
+      src="/Mlogo.png" 
+      alt="MatAssist AI" 
+      className="w-40 h-40 object-contain"
     />
   </div>
   <h1 className="text-2xl font-bold text-foreground">Material Assistant</h1>
@@ -265,10 +265,10 @@ const Auth = () => {
               </button>
             </div>
 
-            {/* L&T Branding Footer */}
+            {/* MatAssist AI Branding Footer */}
             <div className="mt-8 pt-6 border-t border-border">
               <p className="text-xs text-center text-muted-foreground">
-                Powered by <span className="font-semibold text-primary">L&T Technology Services</span>
+                Powered by <span className="font-semibold text-primary">MatAssist AI</span>
               </p>
               <p className="text-xs text-center text-muted-foreground mt-1">
                 Purposeful • Agile • Engineering

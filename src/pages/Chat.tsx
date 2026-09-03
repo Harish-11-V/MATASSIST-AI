@@ -55,6 +55,7 @@ const Chat = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    /* Bypass auth check in Demo mode
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
@@ -62,6 +63,7 @@ const Chat = () => {
       }
     };
     checkAuth();
+    */
   }, [navigate]);
 
   useEffect(() => {
@@ -172,65 +174,27 @@ const Chat = () => {
     setInput('');
     setIsLoading(true);
 
-    let assistantContent = "";
-    const assistantId = crypto.randomUUID();
+    // Hardcoded responses purely for demo presentation
+    setTimeout(() => {
+      let mockContent = "";
+      const lowerInput = userMessage.content.toLowerCase();
 
-    try {
-      const resp = await fetch(CHAT_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-        },
-        body: JSON.stringify({ 
-          messages: [...messages, userMessage].map(m => ({ role: m.role, content: m.content })),
-          application: app 
-        }),
-      });
-
-      if (!resp.ok || !resp.body) {
-        throw new Error("Failed to connect to AI");
+      if (lowerInput.includes("cryogenic") || lowerInput.includes("lng")) {
+        mockContent = "For cryogenic LNG storage down to -196°C, the industry standard is **9% Nickel Steel** or **304/304L Stainless Steel**.\n\n### Recommendations:\n\n🥇 **Rank 1**: 304L Stainless Steel (Excellent toughness at -196°C)\n🥈 **Rank 2**: 9% Nickel Steel (Cost-effective for large tanks)\n🥉 **Rank 3**: Aluminum Alloy 5083 (Lightweight alternative)\n\nBoth 304L and 9% Ni avoid ductile-to-brittle transition temperatures (DBTT) at extremely low temperatures.";
+      } else if (lowerInput.includes("compare") || lowerInput.includes("316l")) {
+        mockContent = "### Comparison: 316L SS vs Inconel 625\n\n| Property | 316L Stainless Steel | Inconel 625 |\n|---|---|---|\n| **Primary Use** | General mildly corrosive | Severe subsea, sour service |\n| **Cost** | 💲 (Lower) | 💲💲💲 (High) |\n| **Pitting Resistance (PREN)** | ~25 | >45 |\n| **Yield Strength** | ~170 MPa | ~414 MPa |\n\n**Recommendation**: Use **316L** for general topside piping. Upgrade to **🥇 Inconel 625** for high-pressure subsea equipment exposed to H2S.";
+      } else if (lowerInput.includes("nace") || lowerInput.includes("sour")) {
+        mockContent = "According to **NACE MR0175 / ISO 15156**, materials exposed to H2S (sour service) must resist Sulfide Stress Cracking (SSC).\n\n### Compliant Materials\n1. **Carbon Steel**: Must have max hardness of 22 HRC.\n2. **316L SS**: Acceptable up to specific temperature/chloride limits.\n3. **🥇 Duplex 2205**: Excellent choice for moderate sour service.\n4. **Inconel 625/718**: For severe sour service at high temperatures.";
+      } else {
+        mockContent = "Based on your query, here is the material assessment:\n\n**🥇 Rank 1**: 316L Stainless Steel\n**🥈 Rank 2**: Duplex 2205\n**🥉 Rank 3**: Carbon Steel (A105)\n\nThese materials offer the best balance of corrosion resistance, structural integrity, and cost for this application profile.";
       }
 
-      const reader = resp.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buffer += decoder.decode(value, { stream: true });
-
-        let idx;
-        while ((idx = buffer.indexOf("\n")) !== -1) {
-          let line = buffer.slice(0, idx);
-          buffer = buffer.slice(idx + 1);
-          if (!line.startsWith("data: ")) continue;
-          const json = line.slice(6).trim();
-          if (json === "[DONE]") break;
-          try {
-            const parsed = JSON.parse(json);
-            const content = parsed.choices?.[0]?.delta?.content;
-            if (content) {
-              assistantContent += content;
-              const materials = extractMaterials(assistantContent);
-              
-              setMessages(prev => {
-                const last = prev[prev.length - 1];
-                if (last?.role === "assistant" && last.id === assistantId) {
-                  return prev.map((m, i) => i === prev.length - 1 ? { ...m, content: assistantContent, materials } : m);
-                }
-                return [...prev, { id: assistantId, role: "assistant", content: assistantContent, materials }];
-              });
-            }
-          } catch {}
-        }
-      }
-    } catch (error) {
-      toast({ title: "Error", description: "Failed to get AI response", variant: "destructive" });
-    } finally {
+      setMessages(prev => [
+        ...prev, 
+        { id: crypto.randomUUID(), role: 'assistant', content: mockContent, materials: extractMaterials(mockContent) }
+      ]);
       setIsLoading(false);
-    }
+    }, 1200);
   };
 
   const handleCopy = (content: string, id: string) => {
@@ -255,11 +219,11 @@ const Chat = () => {
               {messages.map((message) => (
                 <div key={message.id} className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                   {message.role === 'assistant' && (
-                    <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                    <div className="w-20 h-20 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
                       <img 
-                        src="/lt-logo.png" 
-                        alt="L&T" 
-                        className="h-5 w-5 object-contain brightness-110 contrast-125"
+                        src="/Mlogo.png" 
+                        alt="MatAssist AI" 
+                        className="h-16 w-16 object-contain brightness-110 contrast-125"
                         style={{ imageRendering: 'crisp-edges' }}
                       />
                     </div>
@@ -312,11 +276,11 @@ const Chat = () => {
                     )}
                   </div>
                   {message.role === 'user' && (
-                    <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
+                    <div className="w-20 h-20 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
                       <img 
-                        src="/lt-logo.png" 
-                        alt="L&T" 
-                        className="h-5 w-5 object-contain brightness-110 contrast-125"
+                        src="/Mlogo.png" 
+                        alt="MatAssist AI" 
+                        className="h-16 w-16 object-contain brightness-110 contrast-125"
                         style={{ imageRendering: 'crisp-edges' }}
                       />
                     </div>
@@ -336,7 +300,7 @@ const Chat = () => {
             </div>
           </ScrollArea>
 
-          {messages.length === 1 && (
+          {messages.length >= 1 && (
             <div className="px-4 py-2 border-t border-border">
               <p className="text-xs text-muted-foreground mb-2">Suggested questions:</p>
               <div className="flex flex-wrap gap-2">

@@ -183,7 +183,7 @@ export function ChatInterface() {
               >
                 <div
                   className={cn(
-                    "w-8 h-8 rounded-lg flex items-center justify-center shrink-0",
+                    "w-20 h-20 rounded-lg flex items-center justify-center shrink-0",
                     message.role === "assistant"
                       ? "bg-primary"
                       : "bg-accent/10 text-accent"
@@ -191,13 +191,13 @@ export function ChatInterface() {
                 >
                   {message.role === "assistant" ? (
                     <img 
-                      src="/lt-logo.png" 
-                      alt="L&T" 
-                      className="h-5 w-5 object-contain brightness-110 contrast-125"
+                      src="/Mlogo.png" 
+                      alt="MatAssist AI" 
+                      className="h-16 w-16 object-contain brightness-110 contrast-125"
                       style={{ imageRendering: 'crisp-edges' }}
                     />
                   ) : (
-                    <User className="h-4 w-4" />
+                    <User className="h-5 w-5" />
                   )}
                 </div>
                 <div

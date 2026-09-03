@@ -8,7 +8,7 @@ const UNSTRUCTURED_API_KEY = import.meta.env.VITE_UNSTRUCTURED_API_KEY || 'YQmor
 const UNSTRUCTURED_API_URL = 'https://api.unstructured.io/general/v0/general';
 
 // DEMO MODE FLAG - Set to true for demonstration with pre-loaded Duplex data
-const DEMO_MODE = false;  // Changed to false to enable real extraction
+const DEMO_MODE = true;  // Changed to true to enable demo extraction
 
 console.log('🔑 Unstructured API Key loaded:', UNSTRUCTURED_API_KEY ? 'Yes (' + UNSTRUCTURED_API_KEY.substring(0, 10) + '...)' : 'No');
 console.log('🎭 Demo Mode:', DEMO_MODE ? 'ENABLED (Using pre-loaded Duplex data)' : 'Disabled (Real extraction)');

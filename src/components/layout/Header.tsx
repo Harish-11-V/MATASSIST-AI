@@ -43,17 +43,17 @@ export function Header() {
           className="flex items-center gap-3 cursor-pointer" 
           onClick={() => navigate("/")}
         >
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary">
+          <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-primary">
             <img 
-              src="/lt-logo.png" 
-              alt="L&T Technology Services" 
-              className="h-6 w-6 object-contain brightness-110 contrast-125 drop-shadow-sm"
+              src="/Mlogo.png" 
+              alt="MatAssist AI" 
+              className="h-16 w-16 object-contain brightness-110 contrast-125 drop-shadow-sm"
               style={{ imageRendering: 'crisp-edges' }}
             />
           </div>
           <div>
             <h1 className="text-lg font-semibold tracking-tight text-foreground">MatBOT AI</h1>
-            <p className="text-xs text-muted-foreground">L&T Technology Services</p>
+            <p className="text-xs text-muted-foreground">MatAssist AI</p>
           </div>
         </div>
 

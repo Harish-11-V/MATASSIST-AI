@@ -4,15 +4,15 @@ export function Footer() {
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary">
+            <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-primary">
               <img 
-                src="/lt-logo.png" 
-                alt="L&T Technology Services" 
-                className="h-4 w-4 object-contain"
+                src="/Mlogo.png" 
+                alt="MatAssist AI" 
+                className="h-16 w-16 object-contain"
               />
             </div>
             <span className="text-sm text-muted-foreground">
-              Material Assistant • L&T Technology Services
+              Material Assistant • MatAssist AI
             </span>
           </div>
         </div>
